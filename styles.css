@@ -1,0 +1,349 @@
+/* -------------------- Сброс и базовые стили -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f0f2f7;
+    color: #1a1a2e;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* -------------------- Шапка -------------------- */
+.header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    padding: 0 1rem;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #1a1a2e;
+    margin-bottom: 0.25rem;
+}
+
+.header .subhead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #4a4a6a;
+    background: rgba(220, 228, 245, 0.5);
+    display: inline-block;
+    padding: 0.3rem 2rem;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    margin-bottom: 0.75rem;
+}
+
+.header p {
+    max-width: 640px;
+    margin: 0.5rem auto 0;
+    color: #3d3d5c;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* -------------------- Сетка карточек -------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+/* -------------------- Карточка сервиса -------------------- */
+.card {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 1.8rem 1.6rem 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(210, 218, 235, 0.4);
+    backdrop-filter: blur(2px);
+    position: relative;
+    border-left-width: 6px;
+    border-left-style: solid;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(26, 26, 46, 0.08), 0 6px 16px rgba(0, 0, 0, 0.04);
+    border-color: #b8c4de;
+}
+
+/* --- Индивидуальные цвета для каждой карточки --- */
+.card--color-1 {
+    border-left-color: #e74c3c;
+}
+.card--color-1 .card__title,
+.card--color-1 .card__sub {
+    color: #e74c3c;
+}
+
+.card--color-2 {
+    border-left-color: #3498db;
+}
+.card--color-2 .card__title,
+.card--color-2 .card__sub {
+    color: #3498db;
+}
+
+.card--color-3 {
+    border-left-color: #2ecc71;
+}
+.card--color-3 .card__title,
+.card--color-3 .card__sub {
+    color: #2ecc71;
+}
+
+.card--color-4 {
+    border-left-color: #f39c12;
+}
+.card--color-4 .card__title,
+.card--color-4 .card__sub {
+    color: #f39c12;
+}
+
+.card--color-5 {
+    border-left-color: #9b59b6;
+}
+.card--color-5 .card__title,
+.card--color-5 .card__sub {
+    color: #9b59b6;
+}
+
+.card--color-6 {
+    border-left-color: #1abc9c;
+}
+.card--color-6 .card__title,
+.card--color-6 .card__sub {
+    color: #1abc9c;
+}
+
+.card--color-7 {
+    border-left-color: #e67e22;
+}
+.card--color-7 .card__title,
+.card--color-7 .card__sub {
+    color: #e67e22;
+}
+
+.card--color-8 {
+    border-left-color: #2c3e50;
+}
+.card--color-8 .card__title,
+.card--color-8 .card__sub {
+    color: #2c3e50;
+}
+
+/* --- Бейдж --- */
+.card__badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.9rem;
+    border-radius: 30px;
+    background: #e8ecf7;
+    color: #2a2a4a;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    border: 1px solid #d0d8ea;
+}
+
+/* --- Заголовок карточки --- */
+.card__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.2rem;
+    transition: color 0.2s ease;
+}
+
+/* --- Подзаголовок --- */
+.card__sub {
+    font-size: 0.92rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dashed #dce1ef;
+    padding-bottom: 0.6rem;
+    transition: color 0.2s ease;
+}
+
+/* --- Описание --- */
+.card__desc {
+    font-size: 0.97rem;
+    color: #2f2f4a;
+    margin-bottom: 1.2rem;
+    flex: 1;
+    line-height: 1.6;
+}
+
+/* --- Список особенностей --- */
+.card__features {
+    list-style: none;
+    margin-bottom: 1.6rem;
+    padding: 0;
+}
+
+.card__features li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: #2a2a44;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid rgba(210, 218, 235, 0.2);
+}
+
+.card__features li:last-child {
+    border-bottom: none;
+}
+
+.card__features li::before {
+    content: "•";
+    color: #6d7b9e;
+    font-size: 1.2rem;
+    font-weight: 700;
+    opacity: 0.8;
+    line-height: 1;
+}
+
+/* --- Кнопка / ссылка --- */
+.card__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #1a1a2e;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    margin-top: auto;
+    align-self: flex-start;
+    border: 1px solid transparent;
+}
+
+.card__link:hover {
+    background: #2d2d4a;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(26, 26, 46, 0.2);
+}
+
+.card__link:active {
+    transform: scale(0.97);
+}
+
+.card__link i {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.card__link:hover i {
+    transform: translateX(4px);
+}
+
+/* -------------------- Футер -------------------- */
+.footer {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 1.5rem 0 0.5rem;
+    border-top: 1px solid rgba(180, 192, 215, 0.3);
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: #6a6a8a;
+    letter-spacing: 0.02em;
+}
+
+/* -------------------- Адаптивность (Responsive) -------------------- */
+
+/* Планшеты и маленькие ноутбуки */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.6rem;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    body {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .header .subhead {
+        font-size: 1rem;
+        padding: 0.2rem 1.5rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem 1.2rem 1.8rem;
+        border-radius: 24px;
+    }
+
+    .card__title {
+        font-size: 1.5rem;
+    }
+
+    .card__link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer {
+        margin-top: 2.5rem;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 400px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .card__badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.7rem;
+    }
+
+    .card__features li {
+        font-size: 0.85rem;
+    }
+}
